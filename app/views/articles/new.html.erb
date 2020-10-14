@@ -1,5 +1,12 @@
-<h1>New Article</h1>
+<div class="container jumbotron mt-5 jumbo">
+  <div class="row justify-content-center">
+    <h1>Creating New Articale</h1>
+  </div>
+  <div class="row">
+    <div class="col-12">
+    <%= render 'form', article: @article %>
+    </div>
+  </div>
+  
+</div>
 
-<%= render 'form', article: @article %>
-
-<%= link_to 'Back', articles_path %>
