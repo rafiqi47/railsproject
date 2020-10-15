@@ -1,0 +1,28 @@
+@import 'bootstrap/dist/css/bootstrap';
+@import "rails_bootstrap_forms";
+body {
+    background-color: #a779d4;
+}
+
+.jumbotron {
+    background-color: #343a4061;
+}
+
+.jumbohome {
+    background-image: url(https://www.tlc-business.co.uk/wp-content/uploads/2015/08/blog-1030x687.jpeg);
+    background-position: center;
+}
+
+.jumbohome .homej {
+    height: 100px;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+}
