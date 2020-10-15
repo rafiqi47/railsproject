@@ -7,11 +7,12 @@
         <h4 class="alert-heading">
             <%= pluralize(obj.errors.count, "error") %> prohibited this article from being saved</h4>
         <ul>
-            <% obj.errors.full_messages.each do |message| %>
+            <%- obj.errors.full_messages.each do |message| %>
                 <li>
+                    <%- byebug%>
                     <%= message %>
                 </li>
-                <% end %>
+            <% end %>
         </ul>
     </div>
     <div id="error_explanation">
