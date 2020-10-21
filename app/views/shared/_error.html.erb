@@ -7,13 +7,8 @@
         <h4 class="alert-heading">
             <%= pluralize(obj.errors.count, "error") %> prohibited this article from being saved</h4>
         <ul>
-<<<<<<< HEAD
-            <%= obj.errors.full_messages.each do |message| %>
-=======
-            <%- obj.errors.full_messages.each do |message| %>
->>>>>>> 0864a6ad7f77d03b319306f1e3e23ec28c515cd5
+            <% obj.errors.full_messages.each do |message| %>
                 <li>
-                    <%- byebug%>
                     <%= message %>
                 </li>
             <% end %>
