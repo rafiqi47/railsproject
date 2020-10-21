@@ -1,3 +1,19 @@
-<%= render 'layouts/header'%>
-<%= yield %>
-<%= render 'layouts/footer'%>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Kuchbhi</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= render 'layouts/header'%>
+    <%= yield %>
+    <%= render 'layouts/footer'%>
+  </body>
+</html>
+

@@ -1,21 +1,21 @@
-  <%= form_with(model: @user, local: true) do |form| %>
-    <%= render 'shared/error', obj: @user%>
-    <div class="form-group"> 
+<%= form_with(model: @user, local: true) do |form| %>
+  <%= render 'shared/error', obj: @user%>
+  <div class="form-group">
       <%= form.label :username %>
-      <%= form.text_field :username, class: "form-control", placeholder: "enter username" %>
-    </div>
+          <%= form.text_field :username, class: "form-control", placeholder: "enter username" %>
+  </div>
 
-    <div class="form-group">
+  <div class="form-group">
       <%= form.label :email %>
-      <%= form.email_field :email, class: "form-control" , email: "email@example.com"%>
-    </div>
+          <%= form.email_field :email, class: "form-control" , email: "email@example.com"%>
+  </div>
 
-    <div class="form-group">
+  <div class="form-group">
       <%= form.label :password %>
-      <%= form.password_field :password, class: "form-control" , email: "*******"%>
-    </div>
+          <%= form.password_field :password, class: "form-control" , email: "*******"%>
+  </div>
 
-    <div class="form-group">
+  <div class="form-group">
       <%= form.submit(@user.new_record? ? "Register" : "Update Account", class: "btn btn-primary btn-block") %>
-    </div>
-  <% end %>
+  </div>
+<% end %>
