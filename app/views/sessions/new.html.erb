@@ -1,0 +1,25 @@
+<div class="container jumbotron mt-5 jumbo">
+  <div class="row justify-content-center">
+    <h1>Login AlphaBlogs</h1>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <%= form_with(scope: :session, url: login_path, local: true) do |form| %>
+      <div class="form-group">
+          <%= form.label :email %>
+              <%= form.email_field :email, class: "form-control" , email: "email@example.com"%>
+      </div>
+    
+      <div class="form-group">
+          <%= form.label :password %>
+              <%= form.password_field :password, class: "form-control" , email: "*******"%>
+      </div>
+    
+      <div class="form-group">
+          <%= form.submit "Login", class: "btn btn-primary btn-block" %>
+      </div>
+    <% end %>
+    
+    </div>
+  </div>  
+</div>
