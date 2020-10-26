@@ -2,7 +2,11 @@ require 'test_helper'
 
 class ArticlesControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @article = articles(:one)
+    debugger
+    @user = users.first
+    @article = articles(:two)
+    @article.user = @user
+    @article.save
   end
 
   test "should get index" do
@@ -35,7 +39,7 @@ class ArticlesControllerTest < ActionDispatch::IntegrationTest
 
   test "should update article" do
     patch article_url(@article), params: { article: { description: @article.description, title: @article.title } }
-    assert_redirected_to article_url(@article)
+    assert_redirected_to articles_url(@article)
   end
 
   test "should destroy article" do
