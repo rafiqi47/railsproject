@@ -1,0 +1,17 @@
+<div class="container mt-5">
+  <div class="row">
+    <% @users.each do |user| %>
+      <div class="col-4 ">
+        <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+          <div class="card-header"><%= link_to user.username, user, class: "btn btn-primary btn-block" %></div>
+          <div class="card-body">
+            <%= gravatar_user(user)%>
+          </div>
+          <div class="card-footer text-center">
+            <%=pluralize(user.articles.count, "Article")%>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
