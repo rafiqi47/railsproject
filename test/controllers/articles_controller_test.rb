@@ -2,7 +2,6 @@ require 'test_helper'
 
 class ArticlesControllerTest < ActionDispatch::IntegrationTest
   setup do
-    debugger
     @user = users.first
     @article = articles(:two)
     @article.user = @user
